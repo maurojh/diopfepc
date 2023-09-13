@@ -50,7 +50,9 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
         onPressed: () {
-          numeroGerado = _geraNumeroAleatorio();
+          setState(() {
+            numeroGerado = _geraNumeroAleatorio();
+          });
           debugPrint(numeroGerado.toString());
         },
       ),
