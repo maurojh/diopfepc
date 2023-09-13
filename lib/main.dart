@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -31,6 +33,11 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int numeroGerado = 0;
 
+  int _geraNumeroAleatorio() {
+    Random numeroAleatorio = Random();
+    return numeroAleatorio.nextInt(1000);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +49,10 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
-        onPressed: () {},
+        onPressed: () {
+          numeroGerado = _geraNumeroAleatorio();
+          debugPrint(numeroGerado.toString());
+        },
       ),
     );
   }
