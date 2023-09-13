@@ -1,7 +1,7 @@
 // stf TAB
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+
+import '../services/gerador_numero_aleatorio.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -12,11 +12,6 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int numeroGerado = 0;
-
-  int _geraNumeroAleatorio() {
-    Random numeroAleatorio = Random();
-    return numeroAleatorio.nextInt(1000);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +27,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: const Icon(Icons.add),
         onPressed: () {
           setState(() {
-            numeroGerado = _geraNumeroAleatorio();
+            numeroGerado = GeradorNumeroAleatorio.geraNumeroAleatorio();
           });
           debugPrint(numeroGerado.toString());
         },
