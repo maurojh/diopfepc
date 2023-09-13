@@ -1,5 +1,6 @@
 // stf TAB
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../services/gerador_numero_aleatorio.dart';
 
@@ -18,7 +19,10 @@ class _MyHomePageState extends State<MyHomePage> {
     debugPrint('chamando build');
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Meu App'),
+        title: Text(
+          'Meu App',
+          style: GoogleFonts.pacifico(),
+        ),
       ),
       body: Center(
         child: Text(numeroGerado.toString()),
