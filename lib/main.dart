@@ -40,6 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    debugPrint('chamando build');
     return Scaffold(
       appBar: AppBar(
         title: const Text('Meu App'),
