@@ -36,6 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: const Text('Meu App'),
       ),
       floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
         onPressed: () {},
       ),
     );
