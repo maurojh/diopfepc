@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MyApp());
 }
-// stl TAB 
+
+// stl TAB
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 // stf TAB
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -32,6 +34,9 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Meu App'),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
       ),
     );
   }
