@@ -21,11 +21,14 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(
           'Meu App',
-          style: GoogleFonts.pacifico(),
+          //style: GoogleFonts.pacifico(),
         ),
       ),
       body: Center(
-        child: Text(numeroGerado.toString()),
+        child: Text(
+          numeroGerado.toString(),
+          //style: GoogleFonts.acme(fontSize: 20),
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
