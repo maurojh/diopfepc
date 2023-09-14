@@ -25,22 +25,22 @@ class _MyHomePageState extends State<MyHomePage> {
           //style: GoogleFonts.pacifico(),
         ),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: Text(
+      body: Container(
+        padding: EdgeInsets.fromLTRB(10, 20, 0, 0),
+        child: Column(
+          //mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
               'Foi clicado: ${quantidadeDeCliques.toString()} vezes.',
               style: GoogleFonts.acme(fontSize: 20),
             ),
-          ),
-          Center(
-            child: Text(
+            Text(
               'Número gerado foi: ${numeroGerado.toString()}',
               style: GoogleFonts.acme(fontSize: 20),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
