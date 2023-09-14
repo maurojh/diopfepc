@@ -13,6 +13,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int numeroGerado = 0;
+  int quantidadeDeCliques = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -24,17 +25,29 @@ class _MyHomePageState extends State<MyHomePage> {
           //style: GoogleFonts.pacifico(),
         ),
       ),
-      body: Center(
-        child: Text(
-          numeroGerado.toString(),
-          //style: GoogleFonts.acme(fontSize: 20),
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: Text(
+              'Foi clicado: ${quantidadeDeCliques.toString()} vezes.',
+              style: GoogleFonts.acme(fontSize: 20),
+            ),
+          ),
+          Center(
+            child: Text(
+              'Número gerado foi: ${numeroGerado.toString()}',
+              style: GoogleFonts.acme(fontSize: 20),
+            ),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
         onPressed: () {
           setState(() {
             numeroGerado = GeradorNumeroAleatorio.geraNumeroAleatorio();
+            quantidadeDeCliques = quantidadeDeCliques + 1;
           });
           debugPrint(numeroGerado.toString());
         },
