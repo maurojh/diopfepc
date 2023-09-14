@@ -26,11 +26,17 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       body: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+        width: double.infinity,
+        color: Colors.lightBlue,
+        margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
         child: Column(
           //mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
+            Text(
+              'Ações do usuário:',
+              style: GoogleFonts.acme(fontSize: 20),
+            ),
             Text(
               'Foi clicado: ${quantidadeDeCliques.toString()} vezes.',
               style: GoogleFonts.acme(fontSize: 20),
