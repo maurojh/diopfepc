@@ -20,13 +20,13 @@ class _MyHomePageState extends State<MyHomePage> {
     debugPrint('chamando build');
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Meu App',
           //style: GoogleFonts.pacifico(),
         ),
       ),
       body: Container(
-        padding: EdgeInsets.fromLTRB(10, 20, 0, 0),
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
         child: Column(
           //mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
